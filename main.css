@@ -1,0 +1,233 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    transition: 2s ease;
+}
+
+body{
+    font-family:"poppins";
+   
+}
+
+.header{
+    background-image: url(./images/download.jfif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+header nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2rem 0rem;
+    color:aliceblue;
+    
+    background-color: linear-gradient( to right rgba(purple), rgba(blueviolet), rgba(pink));
+}
+
+header nav .logo{
+    font-size: 2rem;
+    font-weight: 600;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 0.2rem 1rem;
+}
+
+header nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 0.7rem;
+}
+
+header nav ul li{
+    list-style: none;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: 500;
+    font-family:'poppins';
+    padding: 0rem 1rem;
+}
+
+header .banner{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 6rem 0rem;
+}
+
+header .main-title{
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: aliceblue;
+}
+
+header .sub-title{
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: aliceblue;
+    margin: 1rem 0rem;
+}
+
+header .sub-title span{
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 0.2rem 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+header .banner-btn{
+    margin-top: 4rem;
+}
+
+header .banner-btn .btn{
+    color: blueviolet;
+    background-color: aliceblue;
+    text-align: center;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.about{
+    margin: 5rem 0rem;
+    /* background: linear-gradient(rgb(236, 223, 248), rgb(245, 218, 245)), url(./images/about\ bg.jpg); */
+    background-size: cover;
+    fill-opacity: 1;
+    /* background-image: linear-gradient(rgba(1, 1, 68, 0.678),rgba(0, 0, 0, 0.767)), url(./img/house\ plan.jpg); */
+    /* opacity: 0.1; */
+}
+.about .about-title{
+    text-align: center;
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+.about .about-container{
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0rem 0rem; */
+    padding: 0rem 5rem;
+    
+}
+
+.about-container img{
+    width: 300px;
+}
+
+.about .about-text{
+    margin-top: 1rem;
+}
+
+.about .about-text-content{
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 2.2;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.offers{
+    background: linear-gradient(rgb(161, 69, 247), rgb(191, 56, 196)), url(./images/about\ bg.jpg);
+    background-size: contain;
+    padding: 4rem 0rem;
+}
+
+.offers .offers-heading{
+    text-align: center;
+    align-items: center;
+    padding: 2rem 0rem;
+}
+
+.offers .offers-title{
+    font-weight: 500;
+    font-size: 2.5rem;
+    color: aliceblue;
+}
+
+.offers .offers-sub-title{
+    font-weight: 500;
+    font-size: 1rem;
+    color: aliceblue;
+}
+
+.offers .offers-cards .card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.offers-cards .card-1{
+    background-color: aliceblue;
+    padding: 3rem 1rem;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.233);
+}
+
+.offers .card-text-title{
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 1.5rem 0rem;
+}
+
+.offers .card-text-body{
+    font-weight: 400;
+    font-size: 0.9rem;
+    line-height: 2;
+}
+
+.features{
+    margin: 5rem 0rem;
+    padding: 4rem 0rem;
+}
+
+.features .features-heading{
+    text-align: center;
+    align-items: center;
+    padding-bottom: 4rem;
+}
+
+.features .features-title{
+    font-weight: 500;
+    font-size: 2.5rem;
+    color: black;
+}
+
+.features .features-sub-title{
+    font-weight: 400;
+    font-size: 1rem;
+    color: grey;
+}
+
+.features .flex{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.features .flex img{
+    width: 290px;
+    border-radius: 15px;
+}
+
+.features .img-1{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.233);
+    border-radius: 15px;
+}
+
+.ad{
+    background: linear-gradient(rgba(137, 43, 226, 0.842),rgba(136, 2, 129, 0.74)), url(./images/about\ bg.jpg);
+    background-size: cover;
+    height: 50vh;
+    margin-bottom: 5rem ;
+}
