@@ -8,43 +8,116 @@
 
 body{
     font-family: "poppins";
-    padding: 2rem 10rem;
+    height: 100vh;
+    /* padding: 2.5rem 12rem; */
+    min-width: 400px;
+    /* background:linear-gradient(rgba(243, 235, 230), rgb(243, 235, 243)); */
+    background:linear-gradient(rgb(232, 213, 250), rgb(219, 185, 221));
 }
 
-.contact-title{
-    font-size: 2.5rem;
-    font-weight: 700;
+header{
+    background:linear-gradient(to right rgb(234, 4, 247), rgb(234, 2, 247));
+}
+label{
+    display: none;
 }
 
-.section1{
+.current_nav{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    padding: 2rem 3rem;
+    color: black;
+    background: none !important;
+   
+}
+.active_nav{
+    /* background: rgb(252, 197, 249) !important; */
+    background: linear-gradient(rgb(241, 240, 240),rgba(252, 250, 250, 0.692)) !important;
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 3.2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.active_nav .logo{
+    color:purple !important;
+}
+.active_nav a{
+    color:purple !important;
+}
+
+header nav .logo{
+    font-size: 2rem;
+    font-weight: 600;
+    /* border: 2px solid white;
+    border-radius: 50%; */
+    color: blueviolet;
+    padding: 0rem 1rem;
+}
+
+header nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 0.7rem;
+}
+
+header nav ul li{
+    list-style: none;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: blueviolet;
+    font-weight: 500;
+    font-family:'poppins';
+    padding: 0rem 1rem;
+}
+
+.section-main-container{
+        padding: 0rem 12rem;
+}
+
+.contact-container{
+    display: flex;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.281);
+    border-radius: 15px;
+    background:linear-gradient(rgb(161, 69, 247), rgb(191, 56, 196));
+}
+
+.contact .title{
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.contact{
+  
+  /* background-image: url(./images/contact-bg.png); */
+  background-color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 15px 0px 0px 15px;
+  padding: 4rem 4rem;
 }
 
 .sub-titles{
-    font-weight: bold;
+    font-weight: 400;
     font-size: 1rem;
     color: black;
-    padding: 0.5rem 0rem;
+    padding: 1.5rem 0rem;
 }
 
 .title-inner{
-    font-weight: 400;
+    font-weight: 300;
     font-size: 1rem;
-    padding-bottom: 1rem;
-}
-
-.flex-1{
-    margin-top: 1rem;
-}
-
-.flex2{
-    padding-bottom: 1rem;
+    padding-top: 5rem;
 }
 
 .input-flex{
     display: flex;
-    justify-content: space-between;
     
 }
 
@@ -52,66 +125,26 @@ body{
     margin-left: 1.5rem;
 }
 
-.input-1{
-    width: 200px;
-    height: 2px;
-    background-color: rgba(0, 0, 0, 0.637);
-    outline: none;
-    border: none;
-}
-
-.input-2{
-    width: 200px;
-    height: 2px;
-    background-color: rgba(0, 0, 0, 0.637);
-    outline: none;
-    border: none;
-}
-
-.input-3{
-    width: 200px;
-    height: 2px;
-    background-color: rgba(0, 0, 0, 0.637);
-    outline: none;
-    border: none;
-}
-
-.input-4{
-    width: 200px;
-    height: 2px;
-    background-color: rgba(0, 0, 0, 0.637);
-    outline: none;
-    border: none;
-}
-
-.input-5{
-    width: 420px;
-    height: 40px;
-    background-color: rgba(219, 214, 214, 0.637);
-    outline: none;
-    border: none;
-    /* padding: 4rem 2rem; */
-    /* margin-top: 5rem; */
-}
 input{
-    height:40px !important;
+    height:10px !important;
+    width: 170px;
+    outline: none !important;
+    border: none;
     background: none !important;
-    border-bottom: solid 1px black !important;
-    position: relative;
+    border-bottom: solid 2px gray !important;
 }
 
-
-.divider{
-    margin-top: 1rem;
-    width: 3px;
-    height: 500px;
-    border-radius: 55px;
-    background: linear-gradient(rgba(137, 43, 226, 0.842),rgba(136, 2, 129, 0.74));
+textarea{
+    height: 100px;
+    width: 370px;
+    color: #000;
+    background:none;
+    border: 2px solid gray;
 }
 
 .btn{
-    margin-top: 4rem;
-    margin-left: 19.5rem;
+    margin-top: 2rem;
+    margin-left: 16.2rem;
 }
 
 .submit-btn{
@@ -121,64 +154,145 @@ input{
     color: aliceblue;
     font-size: 1rem;
     font-weight: 400;
+    border-radius: 2px;
 }
 
-.icon{
-    width: 50px;
-    height: 50px;
+.flex-2{
+    padding: 4rem 0rem;
+
+}
+
+.logo2{
+    font-weight: 700;
+    font-size: 4rem;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid white;
     border-radius: 50%;
-    background: linear-gradient(rgba(137, 43, 226, 0.842),rgba(136, 2, 129, 0.74));
+    padding: 0rem 2rem;
+    margin-top: 10rem;
     color: aliceblue;
-   
 }
 
-.icon .fa-message{
-    color: aliceblue;
-    font-size: 1.4rem;
-    margin-left: 0.8rem;
-    margin-top: 1rem;
-}
 
-.icon .fa-map-marker{
-    color: aliceblue;
-    font-size: 1.5rem;
-    margin-left: 1rem;
-    margin-top: 0.8rem;
-}
-
-.icon .fa-phone{
-    color: aliceblue;
-    font-size: 1.5rem;
-    margin-left: 0.8rem;
-    margin-top: 0.8rem;
-}
-
-.icons{
-    display: flex;
+@media ( max-width:400px) {
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+        transition: 2s ease;
+    }
     
-}
+    body{
+        font-family: "poppins";
+        
+       
+        min-width: 400px;
+        /* background:linear-gradient(rgba(243, 235, 230), rgb(243, 235, 243)); */
+        background:linear-gradient(rgb(215, 173, 255), rgb(194, 150, 196));
+    }
 
-.icon-text{
-    margin-top: 0.5rem;
-    font-weight: 400;
-    font-size: 1.1rem;
-    margin-left: 1rem;
-}
 
-.one{
-    margin-top: 1rem;
-}
-
-.text-area{
-    width:100%;
-    resize: vertical;
-    min-height: 200px;
-}
-.text-area::-webkit-scrollbar-button{
-    color: red;
-    background-color: red;
-}
-.text-area::-webkit-scrollbar-track{
-    color:red;
-    background-color: red;
+    
+    
+    .contact-container{
+        display: flex;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.281);
+        border-radius: 15px;
+        margin: 0rem -10rem;
+        margin-bottom: -10rem;
+        background:linear-gradient(rgb(161, 69, 247), rgb(191, 56, 196));
+    }
+    
+    .contact-title{
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+    
+    .contact{
+      
+      background-image: url(./images/contact-bg.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      
+      border-radius: 15px 0px 0px 15px;
+      padding: 2rem 2rem;
+    }
+    
+    .title{
+        font-size: 2rem;
+        font-weight: 500;
+    }
+    
+    .sub-titles{
+        font-weight: bold;
+        font-size: 0.6rem;
+        color: black;
+        padding: 1.5rem 0rem;
+    }
+    
+    .title-inner{
+        font-weight: 400;
+        font-size: 0.6rem;
+        padding-bottom: 0rem;
+    }
+    
+    .input-flex{
+        display: flex;
+        
+    }
+    
+    .input-flex1{
+        margin-left: 1rem;
+    }
+    
+    input{
+        height:10px !important;
+        width: 100px;
+        outline: none !important;
+        border: none;
+        background: none !important;
+        border-bottom: solid 2px gray !important;
+    }
+    
+    textarea{
+        height: 100px;
+        width: 220px;
+        color: #000;
+        background:none;
+        border: 2px solid gray;
+    }
+    
+    .btn{
+        margin-top: 2rem;
+        margin-left: 7.5rem;
+    }
+    
+    .submit-btn{
+        padding: 0.5rem 0.5rem;
+        text-decoration: none;
+        background:linear-gradient(rgba(137, 43, 226, 0.842),rgba(136, 2, 129, 0.74)) ;
+        color: aliceblue;
+        font-size: 1rem;
+        font-weight: 400;
+        border-radius: 2px;
+    }
+    
+    .flex-2{
+        padding: 4rem 4rem;
+    
+    }
+    
+    .logo{
+        font-weight: 700;
+        font-size: 4rem;
+        justify-content: center;
+        text-align: center;
+        border: 2px solid white;
+        border-radius: 50%;
+        padding: 0.5rem 2rem;
+        margin-top: 10rem;
+        color: aliceblue;
+    }
 }

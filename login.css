@@ -2,8 +2,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
-    transition: 2s ease;
 }
 body{
     font-family: "poppins";
@@ -27,10 +25,9 @@ body{
 .flex{
     display: flex;
     flex-wrap: wrap-reverse;
-    justify-content: space-between;
 }
 
-.flex1{
+.flex-1{
     background-color: #fff;
     padding: 4rem 2rem;
     flex: 1;
@@ -98,7 +95,7 @@ input{
     font-weight: 500;
 }
 
-.flex2{
+.flex-2{
     padding: 4rem 4rem;
     width: 50%;
 
@@ -114,4 +111,81 @@ input{
     padding: 0.5rem 1.2rem;
     margin-top: 8rem;
     color: aliceblue;
+}
+
+
+@media (max-width:800px) {
+    body{
+        padding: 120px 50px;
+        height: 100vh;
+    }
+
+    .container .flex-1{
+        border-radius: 15px;
+        padding: 50px;
+    }
+    .container .flex-2{
+        display: none;
+    }
+
+    
+.title{
+    font-weight: 600;
+    font-size: 50px;
+    color: black;
+}
+
+input{
+    height:10px !important;
+    width:100%;
+    outline: none !important;
+    border: none;
+    background: none !important;
+    border-bottom: solid 2px gray !important;
+}
+
+.inputs-container{
+    margin: 5rem 0rem;
+}
+
+.input-title{
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.inputs-container{
+    margin-top: 3.5rem;
+}
+
+.btn{
+    text-decoration: none;
+    padding: 1rem 2.5rem;
+    background: linear-gradient(rgb(161, 69, 247), rgb(191, 56, 196));
+    color: aliceblue;
+    border-radius: 3px;
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+.btns{
+    margin: 1.5rem 0rem;
+}
+
+.login{
+    margin-top: 3.5rem;
+}
+
+.login-heading{
+    color: black;
+    font-size: 1.7rem;
+    font-weight: 400;
+
+}
+
+.login-heading a{
+    font-size: 1.6rem;
+    color: purple;
+    text-decoration: underline;
+    font-weight: 500;
+}
 }

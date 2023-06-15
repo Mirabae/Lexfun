@@ -3,7 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    transition: 2s ease;
+    transition: 1.2s ease;
 }
 
 body{
@@ -15,24 +15,48 @@ body{
     background-image: url(./images/download.jfif);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 90vh;
+    position: relative;
 }
 
-header nav{
+label{
+    display: none;
+}
+
+.current_nav{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 2rem 0rem;
-    color:aliceblue;
-    
-    background-color: linear-gradient( to right rgba(purple), rgba(blueviolet), rgba(pink));
+    justify-content: space-between;
+    padding: 2rem 3rem;
+    color: black;
+    background: none !important;
+   
+}
+.active_nav{
+    /* background: rgb(252, 197, 249) !important; */
+    background: linear-gradient(rgb(241, 240, 240),rgba(252, 250, 250, 0.692)) !important;
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 3.2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.active_nav .logo{
+    color:purple !important;
+}
+.active_nav a{
+    color:purple !important;
 }
 
 header nav .logo{
     font-size: 2rem;
     font-weight: 600;
-    border: 2px solid white;
-    border-radius: 50%;
+    /* border: 2px solid white;
+    border-radius: 50%; */
+    color: aliceblue;
     padding: 0.2rem 1rem;
 }
 
@@ -58,17 +82,19 @@ header .banner{
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 6rem 0rem;
+    /* height: 700px; */
+
 }
 
 header .main-title{
-    font-size: 3.5rem;
+    font-size: 3.9rem;
     font-weight: 500;
     color: aliceblue;
+    padding-top: 15vh;
 }
 
 header .sub-title{
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     font-weight: 400;
     color: aliceblue;
     margin: 1rem 0rem;
@@ -92,17 +118,19 @@ header .banner-btn .btn{
     text-align: center;
     padding: 1rem 2rem;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.1rem;
     border-radius: 5px;
 }
 
 .about{
-    margin: 5rem 0rem;
-    /* background: linear-gradient(rgb(236, 223, 248), rgb(245, 218, 245)), url(./images/about\ bg.jpg); */
+    margin: -5rem 0rem  0rem;
+    /* background:linear-gradient(rgb(rgba(128, 0, 128, 0.575),rgba(137, 43, 226, 0.486) )); */
+    background: linear-gradient(rgb(246, 210, 248), rgb(245, 206, 247)), url(./images/about\ bg.jpg);
     background-size: cover;
-    fill-opacity: 1;
+    padding: 6rem 0rem;
+    
     /* background-image: linear-gradient(rgba(1, 1, 68, 0.678),rgba(0, 0, 0, 0.767)), url(./img/house\ plan.jpg); */
-    /* opacity: 0.1; */
+    
 }
 .about .about-title{
     text-align: center;
@@ -128,9 +156,9 @@ header .banner-btn .btn{
 }
 
 .about .about-text-content{
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 400;
-    line-height: 2.2;
+    line-height: 2;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -140,7 +168,7 @@ header .banner-btn .btn{
 .offers{
     background: linear-gradient(rgb(161, 69, 247), rgb(191, 56, 196)), url(./images/about\ bg.jpg);
     background-size: contain;
-    padding: 4rem 0rem;
+    padding: 4rem 3rem;
 }
 
 .offers .offers-heading{
@@ -169,15 +197,23 @@ header .banner-btn .btn{
 
 .offers-cards .card-1{
     background-color: aliceblue;
-    padding: 3rem 1rem;
+    padding: 3rem 1.5rem;
     border-radius: 5px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.233);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.555);
+}
+
+.offers-cards .card-11{
+    background-color: aliceblue;
+    padding: 3rem 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.445);
 }
 
 .offers .card-text-title{
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 300;
     margin: 1.5rem 0rem;
+    text-align: center;
 }
 
 .offers .card-text-body{
@@ -221,13 +257,473 @@ header .banner-btn .btn{
 }
 
 .features .img-1{
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.233);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.555);
     border-radius: 15px;
 }
 
 .ad{
     background: linear-gradient(rgba(137, 43, 226, 0.842),rgba(136, 2, 129, 0.74)), url(./images/about\ bg.jpg);
     background-size: cover;
-    height: 50vh;
-    margin-bottom: 5rem ;
+    height: 70vh;
+    text-align: center;
+    padding: 5rem 0rem;
+}
+
+.ad-title{
+    color: aliceblue;
+    font-size: 2.6rem;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    margin-top: 4rem;
+    
+}
+
+.ad-sub{
+    color: aliceblue;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    line-height: 2;
+    padding: 1.2rem 0rem;
+}
+
+.ad-btns{
+    margin-top: 0rem;
+    display: flex;
+    /* justify-content: space-evenly; */
+    padding: 0px 7px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.su-btn{
+    color: blueviolet;
+    background-color: aliceblue;
+    text-align: center;
+    padding: 0.7rem 2.5rem;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-radius: 5px;
+}
+
+footer{
+    display: block;
+    background-color: rgb(240, 227, 252);
+    padding: 2rem 0rem;
+}
+
+.footer{
+    background-color: rgb(240, 227, 252);
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 5rem 0rem;
+    line-height: 2;
+}
+
+.logo{
+    font-weight: 700;
+    font-size: 25px;
+    justify-content: center;
+    color: purple;
+}
+
+.footer-details{
+    font-weight: 400;
+    font-size: 18px;
+    color: rgb(68, 68, 68);
+    padding-bottom: 0rem;
+}
+
+.Company-title{
+    font-weight: 700;
+    font-size: 20px;
+    color: purple;
+}
+
+.company-sub{
+    font-weight: 400;
+    font-size: 18px;
+    color: rgb(68, 68, 68);
+    text-decoration: none;
+}
+
+.copy{
+    font-size: 18px;
+    font-weight: 400;
+    color: rgb(68, 68, 68);
+    padding-left: 9rem;
+    margin-top: 20px;
+}
+
+
+input{
+    width: 200px;
+    height: 45px;
+    padding: 1rem 2rem;
+}
+
+.fab{
+    margin-left: -190px;
+    margin-top: 1rem;
+    /* border: 1px solid black; */
+    /* padding: 0.1rem 0.5rem; */
+    color: grey;
+    font-size: 25px;
+}
+
+
+
+
+@media (max-width:991px) {
+    body{
+        transition: 2s ease;
+    }
+   
+    .home{
+        background-position: left;
+    }
+
+    .header{
+        height: 20vh;
+    }
+
+    .banner{
+        margin-top: -20rem;
+        line-height: 2;
+    }
+    header .sub-title{
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: aliceblue;
+        margin: 1rem 0rem;
+    }
+    
+    header .sub-title span{
+        border: 2px solid white;
+        border-radius: 50%;
+        margin: 2rem 0rem;
+        padding: 0.2rem 1rem;
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    
+    header .banner-btn{
+        margin-top: 4rem;
+    }
+    
+    header .banner-btn .btn{
+        color: blueviolet;
+        background-color: aliceblue;
+        text-align: center;
+        padding: 1rem 2rem;
+        text-decoration: none;
+        font-size: 1rem;
+        border-radius: 5px;
+    }
+
+    .offers{
+        background: linear-gradient(rgb(161, 69, 247), rgb(191, 56, 196)), url(./images/about\ bg.jpg);
+        background-size: contain;
+        padding: 4rem 0rem;
+    }
+    
+    .offers .offers-heading{
+        text-align: center;
+        align-items: center;
+        padding: 2rem 0rem;
+    }
+    
+    .offers .offers-title{
+        font-weight: 500;
+        font-size: 3.5rem;
+        color: aliceblue;
+    }
+    
+    .offers .offers-sub-title{
+        font-weight: 300;
+        padding: 14px;
+        font-size: 14px;
+        color: aliceblue;
+    }
+    
+    .offers .offers-cards .card-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    
+    .offers-cards .card-1{
+        background-color: aliceblue;
+        padding: 3rem;
+        margin-bottom: 5rem;
+        border-radius: 5px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.233);
+    }
+
+    .offers-cards .card-11{
+        background-color: aliceblue;
+        padding: 3rem 4rem;
+        margin-bottom: 5rem;
+        border-radius: 5px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.233);
+    }
+    
+    .offers .card-text-title{
+        font-size: 18px;
+        font-weight: 500;
+        margin: 1.5rem 0rem;
+    }
+    
+    .offers .card-text-body{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 2;
+    }
+
+    
+.features{
+    margin: 5rem 0rem;
+    padding: 4rem 0rem;
+}
+
+.features .features-heading{
+    text-align: center;
+    align-items: center;
+    padding-bottom: 4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.features .features-title{
+    font-weight: 500;
+    font-size: 30px;
+    color: black;
+}
+
+.features .features-sub-title{
+    font-weight: 400;
+    font-size: 14px;
+    padding: 1rem;
+    color: grey;
+}
+
+.features .flex{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.features .flex img{
+    width: 290px;
+    border-radius: 15px;
+}
+
+.features .img-1{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.233);
+    border-radius: 15px;
+    margin-bottom: 5rem;
+}
+
+    .ad{
+        background: linear-gradient(rgba(137, 43, 226, 0.842),rgba(136, 2, 129, 0.74)), url(./images/about\ bg.jpg);
+        background-size: cover;
+        width: 100%;
+        height: 61vh;
+        text-align: center;
+        padding: 6rem 1rem;
+    }
+    
+    .ad-title{
+        color: aliceblue;
+        font-size: 30px;
+        font-weight: 500;
+        letter-spacing: 0.2rem;
+        
+    }
+    
+    .ad-sub{
+        color: aliceblue;
+        font-size: 16px;
+        font-weight: 300;
+        letter-spacing: 0.1rem;
+        line-height: 1.3;
+        padding: 1.2rem 0rem;
+    }
+    
+    .ad-btns{
+        margin-bottom: 5rem;
+    }
+    
+    .signup{
+        padding: 0.5rem 1rem;
+        font-size: 15px;
+        font-weight: 500;
+        text-decoration: none;
+        color: blueviolet;
+        background-color: aliceblue;
+        border-radius: 3px;
+    }
+
+    footer{
+        display: block;
+        background-color: rgb(240, 227, 252);
+        height: 90vh;
+        padding: 0rem 0rem;
+    }
+
+    .footer{
+        background-color: rgb(240, 227, 252);
+        width: 80%;
+        display: flex;
+        height: 70vh;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 5rem 5rem;
+        line-height: 2;
+    }
+    
+    .logo{
+        font-weight: 700;
+        font-size: 25px;
+        justify-content: center;
+        color: purple;
+    }
+    
+    .footer-details{
+        font-weight: 400;
+        font-size: 18px;
+        color: rgb(68, 68, 68);
+        padding-bottom: 1rem;
+    }
+
+    .company{
+        margin-bottom: 12px;
+    }
+    
+    .Company-title{
+        font-weight: 700;
+        font-size: 25px;
+        color: purple;
+    }
+    
+    .company-sub{
+        font-weight: 400;
+        font-size: 18px;
+        color: rgb(68, 68, 68);
+        text-decoration: none;
+    }
+
+    .copy{
+        font-size: 18px;
+        font-weight: 350;
+        color: rgb(68, 68, 68);
+        padding-left: 5rem;
+        margin-top: 90px;
+    }
+
+}
+@media (max-width:600px) {
+
+    /* header label{
+        display: block;
+        position: fixed;
+        z-index: 9999;
+        cursor: pointer;
+    } */
+}
+@media (max-width:991px) {
+    /* header nav{
+        position: absolute;
+        top: 5%; left: 0; right: 0;
+        background: white;
+        opacity: .7;
+        border-top: .1rem solid rgba(156, 156, 156, 0.096);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    header #toggler:checked ~ nav{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); 
+        transition: .2s ease-in-out;
+        background-color: #fff;
+    }
+    header nav a{
+        margin: 0.6rem;
+        padding: 0.5rem;
+       color: black;
+        border: 1rem solid rgba(0, 0, 0, 0.021);
+        display: block;
+        
+    } */
+
+    /* .header{
+        height: 60vh;
+    }
+  
+    ul{
+        display: flex;
+        flex-direction: column;
+    } */
+
+    .header .main-title{
+        font-size: 3.9rem;
+        font-weight: 500;
+        color: aliceblue;
+        padding-top: 0vh;
+    }
+    .home .content h3{
+        font-size: 5rem;
+    }
+    .home .content span{
+        font-size: 2.5rem;
+    }
+    .icons-container .icons h3{
+        font-size: 2rem;
+    }
+    
+    .icons-container .icons span{
+        font-size: 1.7rem;
+    }
+
+}
+
+@media (max-width:450px) {
+
+    html{
+        font-size: 50%;
+    }
+
+    .heading{
+        font-size: 3rem;
+    }
+
+}
+
+
+
+@media (max-width: 768px) {
+    body{
+        position: relative;
+    }
+    .current_nav, .active_nav{
+        padding: 0;
+    }
+    .current_nav .navbar, .active_nav .navbar{
+        background: #000 !important;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    .current_nav .navbar ul, .active_nav .navbar ul{
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
 }
